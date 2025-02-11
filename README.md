@@ -92,4 +92,4 @@ To get started with this project, follow these steps:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/web-dev-learning.git
+   git clone https://github.com/your-username/my-web-dev-journey.git
