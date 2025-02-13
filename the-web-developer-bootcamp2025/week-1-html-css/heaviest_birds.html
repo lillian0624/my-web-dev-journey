@@ -1,0 +1,71 @@
+<!-- this file show how table works -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heaviest Birds Table</title>
+</head>
+
+<body>
+    <h1>Heaviest Birds</h1>
+
+    <table>
+        <thead>
+            <!-- th*3{$} -->
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </thead>
+
+        <tbody>
+            <!-- define a table with 2 rows, each row have 4 cells -->
+            <tr>
+                <td>a</td>
+                <td>s</td>
+                <td>c</td>
+            </tr>
+            <tr>
+                <td>d</td>
+                <td>e</td>
+                <td>f</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- rowspan & colspan -->
+    <h2>V2</h2>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">1</th>
+                <th colspan="2">2</th>
+                <th rowspan="2">3</th>
+            </tr>
+            <tr>
+                <th>2.1</th>
+                <th>2.2</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>a</td>
+                <td>s</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+            <tr>
+                <td>e</td>
+                <td>f</td>
+                <td>g</td>
+                <td>h</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

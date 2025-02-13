@@ -31,10 +31,22 @@ what I learned
 <Span> works for inline elements, style them independently, a piece of tag
 
 4. Semantic Elements
-   html elements naming by waht they mean. it help coder understand the meaning of the element rather than just the generic container<span> <div>. doesn't has any meaning, doesn't explain about what it contains.
+   html tags naming by what they mean. it help coder understand the meaning of the element rather than just the generic container<span> <div>. doesn't has any meaning, doesn't explain about what it contains.
 
    4.1 help SEO, the browser can find it.
    4.2 screen readers
    4.3 help you and others more easier navigate to the code, make the element obvious
 
    `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`, `<h1>` to `<h6>`, `<p>`, `<ul>`, `<ol>`, `<li>`
+
+5. Table and Forms
+<td> table data, single cell
+<tr>table row, define a row of cells
+<th> table header
+
+Forms: It's a shell or container
+button, labels,
+When you submit a form, http request will bw sent, we control where the request goes to using this attribute called action, which method
+
+Form Validation
+Common Input Types
