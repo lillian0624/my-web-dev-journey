@@ -1,0 +1,58 @@
+<!-- The file uses the form to create a web page to register for the marathon -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Registration</title>
+</head>
+
+<body>
+    <hi>Race Registration!</hi>
+
+    <form action="register">
+        <div>
+            <label for="first_Name">First Name</label>
+            <input type="text" name="first_Name" id="first_Name">
+            <label for="last_Name">Last Name</label>
+            <input type="text" name="last_Name" id="last_Name">
+        </div>
+
+        <p>Select a Race:</p>
+        <div>
+            <input type="radio" name="race" id="Fun Run 5K" value="5k">
+            <label for="Fun Run 5K">Fun Run 5K</label>
+        </div>
+
+        <div>
+            <input type="radio" name="race" id="Half Marathon" value="21k">
+            <label for="Half Marathon">Half Marathon</label>
+        </div>
+
+        <div>
+            <input type="radio" name="race" id="Full Marathon" value="41k">
+            <label for="Full Marathon">Full Marathon</label>
+        </div>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+
+        <div>
+            <label for="age_select">Select Age Group</label>
+            <select name="under18" id="age_select">
+                <option value="under18">under18</option>
+                <option value="under65">under65</option>
+                <option value="older than 65">older than 65</option>
+            </select>
+        </div>
+
+        <button>register</button>
+    </form>
+
+</body>
+
+</html>

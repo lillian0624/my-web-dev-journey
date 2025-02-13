@@ -49,4 +49,7 @@ button, labels,
 When you submit a form, http request will bw sent, we control where the request goes to using this attribute called action, which method
 
 Form Validation
+
+<!-- min max minlength maxlength -->
+
 Common Input Types
