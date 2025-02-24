@@ -34,3 +34,25 @@ https://htmlcolorcodes.com/color-picker/
 6. CSS Specificity
    Specificity Calculator Toll
    https://specificity.keegan.st/#google_vignette
+
+ID > Class > Element
+
+7. Box Model
+   Display Property
+
+   inline block inline-block
+
+   Unis-Percentages
+
+   EMS, REMS
+
+8.Difference Between absolute and relative Position in CSS
+8.1 It is positioned relative to itself- Relative
+8.2 It is positioned relative to the nearest ancestor that has a position other than static.
+
+9.Transaction
+Transaction Easing Functions
+https://easings.net/
+
+10. Google Fonts
+    https://fonts.google.com/

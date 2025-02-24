@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicode Grid Fetcher</title>
+</head>
+
+<body>
+
+    <h1>Google Doc Unicode Grid</h1>
+
+    <script>
+        // Your JavaScript code here
+
+        function fetchGoogleDoc(url) {
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Failed to fetch document.");
+                    }
+                    return response.text();
+                });
+        }
+
+        function parseAndPrintGrid(docText) {
+            const rows = docText.split('\n').map(row => row.split(','));
+            const headers = rows[0]; // Assuming the first row is the header
+            const xIndex = headers.indexOf('x-coordinate');
+            const yIndex = headers.indexOf('y-coordinate');
+            const charIndex = headers.indexOf('Character');
+
+            if (xIndex === -1 || yIndex === -1 || charIndex === -1) {
+                throw new Error('Missing expected columns.');
+            }
+
+            const xValues = [];
+            const yValues = [];
+            const characters = [];
+
+            for (let i = 1; i < rows.length; i++) {
+                const row = rows[i];
+                if (row.length > 1) {
+                    xValues.push(parseInt(row[xIndex], 10));
+                    yValues.push(parseInt(row[yIndex], 10));
+                    characters.push(row[charIndex]);
+                }
+            }
+
+            const maxX = Math.max(...xValues);
+            const maxY = Math.max(...yValues);
+
+            const grid = Array.from({ length: maxY + 1 }, () => Array(maxX + 1).fill(' '));
+
+            for (let i = 0; i < xValues.length; i++) {
+                grid[yValues[i]][xValues[i]] = characters[i];
+            }
+
+            // Print the grid
+            grid.forEach(row => {
+                console.log(row.join(''));
+            });
+        }
+
+        function printUnicodeGrid(googleDocUrl) {
+            fetchGoogleDoc(googleDocUrl)
+                .then(docText => parseAndPrintGrid(docText))
+                .catch(error => console.error(error));
+        }
+
+        // Call the function with your Google Doc URL
+        const googleDocUrl = 'https://docs.google.com/document/d/e/2PACX-1vQGUck9HIFCyezsrBSnmENk5ieJuYwpt7YHYEzeNJkIb9OSDdx-ov2nRNReKQyey-cwJOoEKUhLmN9z/pub'; // Replace with your actual Google Doc URL
+        printUnicodeGrid(googleDocUrl);
+    </script>
+
+</body>
+
+</html>
