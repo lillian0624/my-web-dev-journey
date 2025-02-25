@@ -1,3 +1,28 @@
+/* ===============================================================================
+Filename:        app.css
+Date Created:    2025-02-25
+Author:          Li Yang
+
+Purpose:
+    This CSS file including responsive design adjustments to ensure
+    optimal viewing across various devices.
+
+References:
+    - "Responsive Web Design Media Queries" by W3Schools:
+      https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+    - "How to Build a Responsive Navigation Bar With Flexbox" by Anna Monus:
+      https://webdesign.tutsplus.com/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535t
+    - "Media query fundamentals" by MDN Web Docs:
+      https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries
+
+Technologies and Methods:
+    - CSS3: Utilizes Flexbox for layout management and media queries for
+      responsive design.
+    - Flexbox: Employed for creating a flexible and responsive navigation bar.
+    - Media Queries: Implemented to adjust styles based on device screen sizes,
+      enhancing the user experience on different devices. 
+===============================================================================*/
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
