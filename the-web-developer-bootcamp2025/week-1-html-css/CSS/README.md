@@ -56,3 +56,8 @@ https://easings.net/
 
 10. Google Fonts
     https://fonts.google.com/
+
+11. Responsive CSS & Flexbox
+
+12.CSS Tools: Reset CSS
+https://meyerweb.com/eric/tools/css/reset/
