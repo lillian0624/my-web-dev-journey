@@ -1,3 +1,33 @@
+/* ===============================================================================
+Filename:        app.css
+Date Created:    2025-02-27
+Author:          Li Yang
+Purpose:
+This CSS stylesheet is designed to create a responsive pricing panel layout with a clean and modern aesthetic. It utilizes Flexbox for alignment and layout management, ensuring that the design adapts seamlessly to various screen sizes.
+
+Technologies and Methods:
+1. **CSS Reset**: 
+   - Applied a universal reset to remove default margins, padding, and borders from common HTML elements, ensuring consistency across different browsers.
+   - Set `box-sizing: border-box;` on the `html` element to include padding and border in the element's total width and height.
+
+2. **Flexbox Layout**:
+   - Utilized `display: flex;` on the `.panel` class to create a flexible container that aligns its child elements horizontally by default.
+   - Employed `justify-content: center;` to center the `.panel` content horizontally within its parent container.
+   - Used `flex-direction: column;` in media queries to stack the `.panel` child elements vertically on smaller screens.
+   - Applied `text-align: center;` to center-align text within the `.panel`.
+
+3. **Responsive Design with Media Queries**:
+   - Implemented an `@media` query targeting screen widths of 900px or less to adjust the layout for smaller devices.
+   - Within this media query:
+     - Changed the `.panel`'s `flex-direction` to `column` to stack elements vertically.
+     - Removed the right border from `.pricing-plan` and added a bottom border for visual separation.
+     - Ensured the last `.pricing-plan` child does not have a bottom border for a clean end.
+
+4. **Typography**:
+   - Set the base font family to 'Open Sans' for a clean and modern look.
+   - Ensured consistent font sizing and inheritance across elements.
+===============================================================================*/
+
 html,
 body,
 div,
@@ -107,6 +137,7 @@ body {
     background-color: #60a9ff;
     font-family: Open+Sans;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -153,6 +184,7 @@ html {
 
     text-align: center;
     /* flex-direction: column; */
+    text-transform: uppercase;
 }
 
 .pricing-img {
@@ -204,10 +236,31 @@ html {
     padding: 15px 35px;
     text-decoration: none;
     margin: 25px 0;
+    transition: background-color 200ms ease-in-out;
 }
 
-.pricing-button:hover {
-    background-color: #348efe;
-    color: #e1f1ff;
-    transition: background-color 200ms ease-in-out;
+.pricing-button:hover,
+.pricing-button:focus {
+    background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured {
+    background-color: #48aaff;
+    color: white;
+}
+
+@media(max-width:900px) {
+    .panel {
+        flex-direction: column;
+    }
+
+    .pricing-plan {
+        border-right: none;
+        border-bottom: 1px solid #e1f1ff;
+    }
+
+    .pricing-plan:last-child {
+        border-bottom: none
+    }
+
 }
