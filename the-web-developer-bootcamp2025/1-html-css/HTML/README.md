@@ -22,6 +22,9 @@ VSC shortcut
 4. Multi-Cursor Editing
    To engage multi-cursor editing, press Option and use the mouse to place cursors throughout the document.
 
+5. Adding placeholder
+   lorem
+
 what I learned
 
 1. what HTML5 actually is
