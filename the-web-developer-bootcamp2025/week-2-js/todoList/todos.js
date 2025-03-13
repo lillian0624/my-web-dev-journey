@@ -1,3 +1,21 @@
+/* ===============================================================================
+Filename:        app.css
+Date Created:    2025-03-13
+Author:          Li Yang
+
+Purpose:
+    This JavaScript program allows the user to manage a todo list. 
+    It provides the following functionality:
+    - List the current todos
+    - Add new todos
+    - Delete todos by specifying their index in the list
+    - Quit the application
+
+Technologies and Methods:
+    - JavaScript prompt() for user input
+    - Array methods like push() and splice() to modify the todo list
+    - Basic loop control to manage application flow
+===============================================================================*/
 let input;
 const todos = ["Go to CIT", "Taking ENSA class"];
 while (true) {
@@ -5,7 +23,6 @@ while (true) {
 
   if (input === "quit" || input === "q") {
     console.log("Ok, QUIT the APP!");
-    // Exit the loop
   }
 
   if (input === "list") {
@@ -33,5 +50,5 @@ while (true) {
     }
   }
 
-  break;
+  //   break;
 }
