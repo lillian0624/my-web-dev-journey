@@ -16,3 +16,25 @@ X === Y only check they are refer to the same memery but not inside content
    chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.unicode.org/charts/PDF/U0000.pdf
 
 5.Object
+
+6.for loop
+for(let i = 20; i>=0,i++){
+console.log(i);
+}
+
+7. for ... of
+
+8. Functions
+   8.1:Define Functions
+   8.2: Working with Arguments
+   8.3: Function Return Values
+
+function sumArray(nums){
+let sum = 0;
+for (let num of nums){
+
+        sum += num;
+    }
+    return sum ;
+
+}
