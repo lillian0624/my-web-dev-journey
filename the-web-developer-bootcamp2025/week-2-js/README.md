@@ -38,3 +38,10 @@ for (let num of nums){
     return sum ;
 
 }
+
+9. array functions
+   forEach mao filter find reduce some every
+
+10 setTimeout setInterval clearInterval(id)
+
+11. reduce
