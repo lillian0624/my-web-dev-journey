@@ -45,3 +45,5 @@ for (let num of nums){
 10 setTimeout setInterval clearInterval(id)
 
 11. reduce
+
+12. Spreed Destructing
