@@ -96,7 +96,7 @@ p1.button.addEventListener("click", () => updateScore(p1, p2));
 p2.button.addEventListener("click", () => updateScore(p2, p1));
 ```
 
-###Future Improvements
+### Future Improvements
 
 📌 Add support for multiple players dynamically.
 
