@@ -40,7 +40,8 @@ Made the reset logic more scalable by looping through players dynamically.
 
 **Before (Old Code)**
 
-```const p1Button = document.querySelector("#p1Button");
+```javascript
+const p1Button = document.querySelector("#p1Button");
 const p2Button = document.querySelector("#p2Button");
 const p1Display = document.querySelector("#p1Display");
 const p2Display = document.querySelector("#p2Display");
@@ -63,7 +64,8 @@ p2Button.disabled = true;
 
 **After (Refactored Code)**
 
-```const p1 = {
+```javascript
+const p1 = {
 score: 0,
 button: document.querySelector("#p1Button"),
 display: document.querySelector("#p1Display"),
