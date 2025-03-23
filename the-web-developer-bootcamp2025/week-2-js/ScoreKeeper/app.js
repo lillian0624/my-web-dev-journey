@@ -1,3 +1,19 @@
+/* ===============================================================================
+Filename:        app.js
+Date Created:    2025-03-23
+Author:          Li Yang
+
+Purpose:
+    This code implements a player scorekeeper for a simple game. It allows two players to click buttons to increment their score, 
+  tracks the score, and ends the game when one player reaches the predefined winning score. 
+  The game features a reset button, and a selector to change the winning score.
+
+Technologies and Methods:
+    - HTML (for structure)
+  - JavaScript (for logic and event handling)
+  - Bulma (for styling classes like "has-text-success" and "has-text-danger")
+
+===============================================================================*/
 const p1 = {
   score: 0,
   button: document.querySelector("#p1Button"),
