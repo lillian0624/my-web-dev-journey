@@ -40,7 +40,7 @@ Made the reset logic more scalable by looping through players dynamically.
 
 **Before (Old Code)**
 
-`const p1Button = document.querySelector("#p1Button");
+```const p1Button = document.querySelector("#p1Button");
 const p2Button = document.querySelector("#p2Button");
 const p1Display = document.querySelector("#p1Display");
 const p2Display = document.querySelector("#p2Display");
@@ -59,11 +59,11 @@ p2Display.classList.add("has-text-danger");
 p1Button.disabled = true;
 p2Button.disabled = true;
 }
-});`
+});```
 
 **After (Refactored Code)**
 
-`const p1 = {
+```const p1 = {
 score: 0,
 button: document.querySelector("#p1Button"),
 display: document.querySelector("#p1Display"),
@@ -90,7 +90,7 @@ player.display.textContent = player.score;
 }
 
 p1.button.addEventListener("click", () => updateScore(p1, p2));
-p2.button.addEventListener("click", () => updateScore(p2, p1));`
+p2.button.addEventListener("click", () => updateScore(p2, p1));```
 
 ###Future Improvements
 
