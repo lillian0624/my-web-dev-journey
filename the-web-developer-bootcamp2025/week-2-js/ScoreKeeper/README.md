@@ -60,7 +60,8 @@ p2Display.classList.add("has-text-danger");
 p1Button.disabled = true;
 p2Button.disabled = true;
 }
-});```
+});
+```
 
 **After (Refactored Code)**
 
@@ -92,7 +93,8 @@ player.display.textContent = player.score;
 }
 
 p1.button.addEventListener("click", () => updateScore(p1, p2));
-p2.button.addEventListener("click", () => updateScore(p2, p1));```
+p2.button.addEventListener("click", () => updateScore(p2, p1));
+```
 
 ###Future Improvements
 
