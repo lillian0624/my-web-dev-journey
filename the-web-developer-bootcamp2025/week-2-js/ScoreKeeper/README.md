@@ -4,15 +4,15 @@
 
 This document explains the reasoning behind refactoring the player scorekeeper logic in our JavaScript codebase. The primary goal of this refactor was to improve maintainability, reduce redundancy, and enhance scalability.
 
-###Why Refactor?
+### Why Refactor?
 
 The previous implementation had the following issues:
 
-Code Redundancy: The code for handling player actions was duplicated for both players.
+- Code Redundancy: The code for handling player actions was duplicated for both players.
 
-Hard to Maintain: Any modification required changing multiple places in the code.
+- Hard to Maintain: Any modification required changing multiple places in the code.
 
-Scalability Limitations: The structure did not allow easy extension for multiple players.
+- Scalability Limitations: The structure did not allow easy extension for multiple players.
 
 ### What Was Changed?
 
