@@ -1,20 +1,20 @@
-Refactoring Player Score Keeper
+# Refactoring Player Score Keeper
 
-Overview
+### Overview
 
 This document explains the reasoning behind refactoring the player scorekeeper logic in our JavaScript codebase. The primary goal of this refactor was to improve maintainability, reduce redundancy, and enhance scalability.
 
-Why Refactor?
+### Why Refactor?
 
 The previous implementation had the following issues:
 
-Code Redundancy: The code for handling player actions was duplicated for both players.
+- Code Redundancy: The code for handling player actions was duplicated for both players.
 
-Hard to Maintain: Any modification required changing multiple places in the code.
+- Hard to Maintain: Any modification required changing multiple places in the code.
 
-Scalability Limitations: The structure did not allow easy extension for multiple players.
+- Scalability Limitations: The structure did not allow easy extension for multiple players.
 
-What Was Changed?
+### What Was Changed?
 
 ✅ Introduced Player Objects
 
@@ -28,7 +28,7 @@ Removed repeated logic for handling player scores and winning conditions.
 
 Made the reset logic more scalable by looping through players dynamically.
 
-Benefits of This Refactor
+### Benefits of This Refactor
 
 🚀 Less Code Duplication – Code is cleaner and easier to modify.
 
@@ -36,10 +36,11 @@ Benefits of This Refactor
 
 🛠 Improved Maintainability – Logic is encapsulated within functions and objects.
 
-Before & After Comparison
+### Before & After Comparison
 
-Before (Old Code)
+**Before (Old Code)**
 
+```javascript
 const p1Button = document.querySelector("#p1Button");
 const p2Button = document.querySelector("#p2Button");
 const p1Display = document.querySelector("#p1Display");
@@ -60,9 +61,11 @@ p1Button.disabled = true;
 p2Button.disabled = true;
 }
 });
+```
 
-After (Refactored Code)
+**After (Refactored Code)**
 
+```javascript
 const p1 = {
 score: 0,
 button: document.querySelector("#p1Button"),
@@ -91,8 +94,9 @@ player.display.textContent = player.score;
 
 p1.button.addEventListener("click", () => updateScore(p1, p2));
 p2.button.addEventListener("click", () => updateScore(p2, p1));
+```
 
-Future Improvements
+### Future Improvements
 
 📌 Add support for multiple players dynamically.
 
