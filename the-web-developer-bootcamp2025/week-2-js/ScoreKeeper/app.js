@@ -7,7 +7,7 @@ const winningScoreSelect = document.querySelector("#playTo");
 
 let p1Score = 0;
 let p2Score = 0;
-let winningScore = 5;
+let winningScore = 3;
 let isGameOver = false;
 
 p1Button.addEventListener("click", function () {
@@ -18,8 +18,11 @@ p1Button.addEventListener("click", function () {
   if (p1Score === winningScore) {
     isGameOver = true;
     console.log("P1 win");
-    p1Display.classList.add("winner");
-    p2Display.classList.add("loser");
+    //class="has-text-success" is the Bulma's text color
+    p1Display.classList.add("has-text-success");
+    p2Display.classList.add("has-text-danger");
+    p1Button.disabled = true;
+    p2Button.disabled = true;
   }
 });
 
@@ -31,8 +34,10 @@ p2Button.addEventListener("click", function () {
   if (p2Score === winningScore) {
     isGameOver = true;
     console.log("P2 win");
-    p2Display.classList.add("winner");
-    p1Display.classList.add("loser");
+    p2Display.classList.add("has-text-success");
+    p1Display.classList.add("has-text-danger");
+    p1Button.disabled = true;
+    p2Button.disabled = true;
   }
 });
 
@@ -49,6 +54,8 @@ function reset() {
   p2Score = 0;
   p1Display.textContent = 0;
   p2Display.textContent = 0;
-  p1Display.classList.remove("winner", "loser");
-  p2Display.classList.remove("loser", "winner");
+  p1Display.classList.remove("has-text-success", "has-text-danger");
+  p2Display.classList.remove("has-text-danger", "has-text-success");
+  p1Button.disabled = false;
+  p2Button.disabled = false;
 }
