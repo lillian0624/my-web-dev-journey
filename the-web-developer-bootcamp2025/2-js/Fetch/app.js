@@ -1,7 +1,12 @@
 // https://swapi.dev/api/people/1/
-const loadStarWarsPeople = async () => {
-  const res = await fetch("https://swapi.dev/api/people/1/");
-  const data = await res.json();
+const getStarWarsPeople = async () => {
+  try {
+    const res = await fetch("https://swapi.dev/api/people/1/");
+    const data = await res.json();
+    console.log(data);
+  } catch (e) {
+    console.log("ERROR", e);
+  }
 };
 
-loadStarWarsPeople();
+getStarWarsPeople();
