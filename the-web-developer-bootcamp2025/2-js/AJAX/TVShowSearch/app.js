@@ -13,6 +13,10 @@ form.addEventListener("submit", async function (e) {
 
 // make a loop of all the images return from the search
 const makeImages = (shows) => {
+  // Clear previous images
+  const existingImages = document.querySelectorAll("img");
+  existingImages.forEach((img) => img.remove());
+
   for (let result of shows) {
     if (result.show.image) {
       const img = document.createElement("IMG");
