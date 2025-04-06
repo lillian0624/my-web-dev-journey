@@ -9,3 +9,16 @@ The Node REPL
 .help
 
 ^C ^d exit
+
+Node Doc
+https://nodejs.org/docs/latest/api/
+
+2.Process
+
+process.cwd()
+
+3. Package
+
+4. module
+   Module.Exports
+   Requiring Modules
