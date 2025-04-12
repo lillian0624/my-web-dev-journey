@@ -15,6 +15,12 @@ app.get("/rand", (req, res) => {
   res.render("random.ejs", { rand: num });
 });
 
+app.get("/r/:subreddit", (req, res) => {
+  // console.log("Visited subreddit route:", req.params.subreddit);
+  const { subreddit } = req.params;
+  res.render("subreddit.ejs", { subreddit });
+});
+
 app.listen(3000, () => {
   console.log("Listening on port 3000");
 });
