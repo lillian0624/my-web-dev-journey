@@ -5,12 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= subreddit %>
+        <%= name %>
     </title>
 </head>
 
 <body>
-    <h1> Browsing The <%= subreddit %> subreddit</h1>
+    <h1> Browsing The <%= name %> subreddit</h1>
+    <p>
+        <%= description %>
+    </p>
+    <h2>Posts:</h2>
+    <ul>
+        <% posts.forEach(post=> { %>
+            <li>
+                <h3>
+                    <%= post.title %>
+                </h3>
+                <p>by <b>
+                        <%= post.author %>
+                    </b>
+                </p>
+                <% if(post.img) { %>
+                    <img src="<%= post.img %>" alt="<%= post.title %>" />
+                    <% } %>
+            </li>
+            <% }) %>
+    </ul>
 </body>
 
 </html>

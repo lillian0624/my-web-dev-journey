@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const RedditData = require("./data.json");
 
 //using ejs as a template engine
 app.set("view engine", "ejs");
@@ -18,7 +19,12 @@ app.get("/rand", (req, res) => {
 app.get("/r/:subreddit", (req, res) => {
   // console.log("Visited subreddit route:", req.params.subreddit);
   const { subreddit } = req.params;
-  res.render("subreddit.ejs", { subreddit });
+  const data = RedditData[subreddit];
+  if (data) {
+    res.render("subreddit.ejs", { ...data });
+  } else {
+    res.render("notfound.ejs", { subreddit });
+  }
 });
 
 app.get("/cats", (req, res) => {
@@ -28,4 +34,5 @@ app.get("/cats", (req, res) => {
 
 app.listen(3000, () => {
   console.log("Listening on port 3000");
+  console.log("Server is running!");
 });
