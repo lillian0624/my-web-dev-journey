@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 
 app.get("/rand", (req, res) => {
   const num = Math.floor(Math.random() * 10) + 1;
-  res.render("random.ejs", { rand: num });
+  res.render("random.ejs", { num });
 });
 
 app.get("/r/:subreddit", (req, res) => {
