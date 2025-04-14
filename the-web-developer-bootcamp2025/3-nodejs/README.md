@@ -54,8 +54,23 @@ Modemon
 automatically restarting the node application when file changes in the directory are detected.https://www.npmjs.com/package/nodemon
 
 Templating
-Configuring Express for EJS
+Configuring Express for EJS (Embedded JS templating)
 Passing Data to Templates
 Saving Static Assets
 Creating Partials
 EJS Loops & Conditionals
+
+EJS
+Embedded JS Templating
+
+Server-side (EJS): The random number is generated once on the server and sent to the browser as static HTML.
+Client-side (JavaScript): The random number is generated dynamically in the browser after the page loads.
+
+REST
+representational state transfer
+https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+
+RESTful
+
+UUID
+https://www.npmjs.com/package/uuid
