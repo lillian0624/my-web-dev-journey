@@ -51,3 +51,12 @@ async function main() {
 }
 
 main();
+
+
+//To Run
+// mongosh
+// use movieApp
+// db.movies.drop()
+// db.movies.find()
+
+// db.movies.find({title: "Amazon"})
