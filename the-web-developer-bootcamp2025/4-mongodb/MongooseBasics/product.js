@@ -48,15 +48,24 @@ productSchema.methods.greet = function () {
   console.log(`- ${this.name}`);
 };
 
+//static methods
+productSchema.statics.fireSale = function () {
+  return this.updateMany({ onSale: true }, { price: 0.0 });
+};
+
 const Product = mongoose.model("Product", productSchema);
 
-const findProduct = async () => {
-  const products = await Product.find({ name: "Bike Helmet" });
-  for (let p of products) {
-    p.greet();
-  }
-};
-findProduct();
+// const findProduct = async () => {
+//   const products = await Product.find({ name: "Bike Helmet" });
+//   for (let p of products) {
+//     p.greet();
+//   }
+// };
+// findProduct();
+
+Product.fireSale().then((res) => {
+  console.log(res);
+});
 
 // new Product({
 //   name: "Bike Helmet",
