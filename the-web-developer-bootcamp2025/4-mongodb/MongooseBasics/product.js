@@ -24,10 +24,27 @@ const productSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  categories: [String],
+  qty: {
+    online: {
+      type: Number,
+      default: 0,
+    },
+    inStore: {
+      type: Number,
+      default: 0,
+    },
+  },
 });
 
 const Product = mongoose.model("Product", productSchema);
-new Product({ name: "Bike Helmet", price: 100, onSale: true })
+new Product({
+  name: "Bike Helmet",
+  price: 100,
+  onSale: true,
+  categories: ["Cycling", "Safety"],
+  qty: { online: 10, inStore: 5 },
+})
   .save()
   .then((p) => {
     console.log(p);
