@@ -37,32 +37,50 @@ const productSchema = new mongoose.Schema({
       default: 0,
     },
   },
+  size: {
+    type: String,
+    enum: ["S", "M", "L"],
+  },
 });
 
+productSchema.methods.greet = function () {
+  console.log("Hello from product!");
+  console.log(`- ${this.name}`);
+};
+
 const Product = mongoose.model("Product", productSchema);
+
+const findProduct = async () => {
+  const products = await Product.find({ name: "Bike Helmet" });
+  for (let p of products) {
+    p.greet();
+  }
+};
+findProduct();
+
 // new Product({
 //   name: "Bike Helmet",
 //   price: 100,
 //   onSale: true,
 //   categories: ["Cycling", "Safety"],
 //   qty: { online: 10, inStore: 5 },
-// })
-//   .save()
+//   size: "S",
+// }).save();
 
-Product.findOneAndUpdate(
-  { name: "Bike Helmet" },
-  { price: -99.99 },
-  { new: true, runValidators: true }
-)
-  .then((p) => {
-    console.log(p);
-  })
-  .catch((e) => {
-    if (e.errors) {
-      for (let field in e.errors) {
-        console.log(`${field}: ${e.errors[field].message}`);
-      }
-    } else {
-      console.log("Error:", e.message);
-    }
-  });
+// Product.findOneAndUpdate(
+//   { name: "Bike Helmet" },
+//   { price: -99.99 },
+//   { new: true, runValidators: true }
+// )
+//   .then((p) => {
+//     console.log(p);
+//   })
+//   .catch((e) => {
+//     if (e.errors) {
+//       for (let field in e.errors) {
+//         console.log(`${field}: ${e.errors[field].message}`);
+//       }
+//     } else {
+//       console.log("Error:", e.message);
+//     }
+//   });
