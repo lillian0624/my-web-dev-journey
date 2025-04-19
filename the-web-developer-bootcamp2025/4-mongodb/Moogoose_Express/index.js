@@ -33,3 +33,8 @@ app.listen(3000, () => {
 });
 
 //nodemon index.js
+
+// mongosh
+// use farmStand
+// show collections
+// db.products.find()
