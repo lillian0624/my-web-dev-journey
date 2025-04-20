@@ -29,21 +29,25 @@ mongoose
 
 const seedProducts = [
   {
+    id: 1,
     name: "Fairy Eggplant",
     price: 1.0,
     category: "vegetable",
   },
   {
+    id: 2,
     name: "Organic Avocado",
     price: 2.5,
     category: "fruit",
   },
   {
+    id: 3,
     name: "Organic Garlic",
     price: 2.0,
     category: "vegetable",
   },
   {
+    id: 4,
     name: "Organic Melon",
     price: 3.0,
     category: "fruit",
