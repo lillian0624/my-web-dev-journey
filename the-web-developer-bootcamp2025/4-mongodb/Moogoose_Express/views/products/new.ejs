@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Product</title>
+</head>
+
+<body>
+    <h1>Add A Product</h1>
+    <form action="/products" method="POSt">
+        <label for="name">Name</label>
+        <input type="text" name="product[name]" id="name" required>
+        <br>
+        <label for="price">Price</label>
+        <input type="number" name="product[price]" id="price" required>
+        <br>
+        <label for="description">Description</label>
+        <textarea name="product[description]" id="description" required></textarea>
+        <br>
+        <label for="category">Category</label>
+        <input type="text" name="product[category]" id="category" required>
+        <br>
+        <label for="inStock">In Stock</label>
+        <input type="checkbox" name="product[inStock]" id="inStock">
+        <br>
+        <button type="submit">Create Product</button>
+        <a href="/products">Back to all products</a>
+        <a href="/products/new">Add a new product</a>
+        <a href="/products/:id/edit">Edit a product</a>
+    </form>
+</body>
+
+</html>
