@@ -9,7 +9,7 @@
 
 <body>
     <h1>Edit A Product</h1>
-    <form action="/products/<%= product._id  %>/edit" method="POSt">
+    <form action="/products/<%= product._id %>?_method=PUT" method="POSt">
         <label for="name">Product Name</label>
         <input type="text" name="name" id="name" placeholder="product name" value="<%= product.name  %>">
         <label for="price">Price (Unit)</label>
@@ -18,13 +18,14 @@
         <label for="category">Select Category</label>
         <select name="category" id="category">
             <% for(let category of categories){ %>
-                <option value="<%=category%>">
+                <option value="<%=category.toLowerCase()%>">
+
                     <%=category%>
                 </option>
                 <% } %>
         </select>
         <br>
-        <button type="submit">Create Product</button>
+        <button type="submit">Submit</button>
         <a href="/products">Back to all products</a>
         <a href="/products/new">Add a new product</a>
         <a href="/products/:id/edit">Edit a product</a>
