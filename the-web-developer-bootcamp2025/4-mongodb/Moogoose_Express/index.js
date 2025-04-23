@@ -52,6 +52,12 @@ app.get("/products/:id", async (req, res) => {
   // res.send("details page!");
   res.render("products/show", { product });
 });
+app.get("/products/:id/edit", async (req, res) => {
+  const { id } = req.params;
+  const product = await Product.findById(id);
+  const categories = ["Fruit", "Vegetable", "Dairy", "Meat", "Grain"];
+  res.render("products/edit", { product, categories });
+});
 
 app.listen(3000, () => {
   console.log("Server started on port 3000");
