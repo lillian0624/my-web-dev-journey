@@ -18,9 +18,9 @@
         <label for="category">Select Category</label>
         <select name="category" id="category">
             <% for(let category of categories){ %>
-                <option value="<%=category.toLowerCase()%>">
-
-                    <%=category%>
+                <option value="<%= category %>" <%=product.category.toLowerCase()===category.toLowerCase() ? 'selected'
+                    : '' %>>
+                    <%= category %>
                 </option>
                 <% } %>
         </select>
