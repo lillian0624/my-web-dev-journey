@@ -50,7 +50,7 @@ app.post("/products", async (req, res) => {
 app.get("/products/:id", async (req, res) => {
   const { id } = req.params;
   const product = await Product.findById(id);
-  console.log(product);c
+  console.log(product);
   // res.send("details page!");
   res.render("products/show", { product });
 });
