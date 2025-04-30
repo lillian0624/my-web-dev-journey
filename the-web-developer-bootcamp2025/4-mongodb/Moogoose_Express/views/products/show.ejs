@@ -24,6 +24,11 @@
 
     <a href="/products">Back to all products</a>
     <a href="/products/<%= product._id.toString() %>/edit">Edit this product</a>
+    <form action="/products/<%= product._id.toString() %>?_method=DELETE" method="POST"
+        onsubmit="return confirm('Are you sure you want to delete this product?');">
+        <button type="submit">Delete this product</button>
+    </form>
+
 </body>
 
 </html>
